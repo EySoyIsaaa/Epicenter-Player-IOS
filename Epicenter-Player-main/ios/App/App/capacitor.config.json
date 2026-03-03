@@ -1,0 +1,10 @@
+{
+  "appId": "com.epicenter.hifi",
+  "appName": "EpicenterDSP PLAYER",
+  "webDir": "dist/public",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https",
+    "iosScheme": "https"
+  }
+}

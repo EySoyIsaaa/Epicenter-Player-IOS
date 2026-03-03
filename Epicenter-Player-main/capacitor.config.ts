@@ -1,0 +1,31 @@
+import type { CapacitorConfig } from '@capacitor/cli';
+
+const config: CapacitorConfig = {
+  appId: 'com.epicenter.hifi',
+  appName: 'EpicenterDSP PLAYER',
+  webDir: 'dist/public',
+  server: {
+    androidScheme: 'https',
+    iosScheme: 'https',
+  },
+  ios: {
+    contentInset: 'automatic',
+    backgroundColor: '#000000',
+    allowsLinkPreview: false,
+  },
+  android: {
+    backgroundColor: '#000000',
+    allowMixedContent: true,
+    webContentsDebuggingEnabled: false,
+  },
+  plugins: {
+    SplashScreen: {
+      launchShowDuration: 1500,
+      backgroundColor: '#000000',
+      showSpinner: false,
+      launchAutoHide: true,
+    },
+  },
+};
+
+export default config;
