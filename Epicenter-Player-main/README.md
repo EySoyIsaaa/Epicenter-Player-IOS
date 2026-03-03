@@ -128,8 +128,12 @@ Se añadió el port nativo a iOS con estructura base en `ios/App` y plugin nativ
 3. Desde la raíz, ejecuta:
    - `npx cap add ios` (si el proyecto iOS no existe)
    - `npx cap sync ios`
-4. Abre `ios/App/App.xcworkspace` en Xcode.
-5. Selecciona Team/Firma y ejecuta en dispositivo real (el simulador no expone música local real).
+4. Si `pod install` falla con `Could not automatically select an Xcode project`, genera primero la plataforma iOS:
+   - `npx cap add ios`
+   - `npx cap sync ios`
+   - `cd ios/App && pod install`
+5. Abre `ios/App/App.xcworkspace` en Xcode.
+6. Selecciona Team/Firma y ejecuta en dispositivo real (el simulador no expone música local real).
 
 > Nota: iOS devuelve únicamente pistas disponibles en la librería local accesible por `MPMediaQuery` y puede omitir contenido protegido/no descargado.
 
